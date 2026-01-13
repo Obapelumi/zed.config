@@ -1,0 +1,44 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "shift-enter": ["terminal::SendText", "\u001b\r"],
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-y": "editor::Redo",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-g": "agent::AllowOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-g": "agent::AllowOnce",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-g": "agent::AllowOnce",
+    },
+  },
+  {
+    "context": "(Editor && editor_agent_diff)",
+    "bindings": {
+      "cmd-g": "agent::Keep",
+    },
+  },
+]

@@ -1,0 +1,75 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "terminal": { "dock": "right" },
+  "buffer_font_size": 12.0,
+  "buffer_font_features": { "calt": false },
+  "git": { "inline_blame": { "enabled": false } },
+  "toolbar": { "quick_actions": false, "breadcrumbs": false },
+  "scrollbar": { "git_diff": false, "cursors": true },
+  "cursor_shape": "bar",
+  "tabs": {
+    "show_diagnostics": "errors",
+    "file_icons": true,
+    "git_status": true,
+  },
+  "show_edit_predictions": false,
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5",
+    },
+    "profiles": {},
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5",
+    },
+    "always_allow_tool_actions": true,
+    "message_editor_min_lines": 4,
+    "play_sound_when_agent_done": false,
+    "model_parameters": [],
+  },
+  "cursor_blink": true,
+  "agent_buffer_font_size": 14.0,
+  "ui_font_weight": 400.0,
+  "buffer_font_weight": 550.0,
+  "buffer_font_family": "Monaco",
+  "project_panel": {
+    "button": true,
+    "auto_reveal_entries": true,
+    "git_status": true,
+    "folder_icons": false,
+    "file_icons": true,
+    "dock": "left",
+    "auto_fold_dirs": false,
+  },
+  "base_keymap": "VSCode",
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "minimap": {
+    "max_width_columns": 40,
+  },
+  "file_types": {
+    "handlebars": ["*.stub"],
+    "shellscript": ["**/bin/**/*"],
+    "typescript": ["**/bin/**/*.ts"],
+    "JSONC": ["**/.eslintrc", "**/tsconfig.json", "**/.prettierrc"],
+  },
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "telemetry": { "metrics": false, "diagnostics": false },
+  "ui_font_size": 15.0,
+  "theme": "VS Code Dark+",
+}
