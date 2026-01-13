@@ -1,11 +1,5 @@
 [
   {
-    "context": "Terminal",
-    "bindings": {
-      "shift-enter": "terminal::SendText",
-    },
-  },
-  {
     "context": "Editor",
     "bindings": {
       "alt-shift-f": "editor::Format",
@@ -15,18 +9,6 @@
     "context": "Editor",
     "bindings": {
       "cmd-y": "editor::Redo",
-    },
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "cmd-g": "agent::AllowOnce",
-    },
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "cmd-g": "agent::AllowOnce",
     },
   },
   {
