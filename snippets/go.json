@@ -1,0 +1,144 @@
+{
+  "Package Main": {
+    "prefix": "pkgm",
+    "body": ["package main", "", "func main() {", "\t$0", "}"],
+    "description": "Package main with main function",
+  },
+  "Function": {
+    "prefix": "ffn",
+    "body": ["func ${1:name}(${2:params}) ${3:error} {", "\t$0", "}"],
+    "description": "Function definition",
+  },
+  "Method": {
+    "prefix": "meth",
+    "body": [
+      "func (${1:receiver} ${2:Type}) ${3:name}(${4:params}) ${5:error} {",
+      "\t$0",
+      "}",
+    ],
+    "description": "Method definition",
+  },
+  "If Statement": {
+    "prefix": "iff",
+    "body": ["if ${1:condition} {", "\t$0", "}"],
+    "description": "If statement",
+  },
+  "If-Else Statement": {
+    "prefix": "ife",
+    "body": ["if ${1:condition} {", "\t$0", "} else {", "\t", "}"],
+    "description": "If-Else statement",
+  },
+  "If Error": {
+    "prefix": "iferr",
+    "body": ["if err != nil {", "\t$0", "}"],
+    "description": "If error check",
+  },
+  "If Error Return": {
+    "prefix": "ifer",
+    "body": ["if err != nil {", "\treturn $0err", "}"],
+    "description": "If error return",
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": ["for ${1:i} := 0; ${1:i} < ${2:count}; ${1:i}++ {", "\t$0", "}"],
+    "description": "For loop",
+  },
+  "For Range": {
+    "prefix": "forr",
+    "body": [
+      "for ${1:index}, ${2:value} := range ${3:collection} {",
+      "\t$0",
+      "}",
+    ],
+    "description": "For range loop",
+  },
+  "For Range Value Only": {
+    "prefix": "forrv",
+    "body": ["for _, ${1:value} := range ${2:collection} {", "\t$0", "}"],
+    "description": "For range loop (value only)",
+  },
+  "For Range Index Only": {
+    "prefix": "forri",
+    "body": ["for ${1:index} := range ${2:collection} {", "\t$0", "}"],
+    "description": "For range loop (index only)",
+  },
+  "While Loop": {
+    "prefix": "whi",
+    "body": ["for ${1:condition} {", "\t$0", "}"],
+    "description": "While-style loop",
+  },
+  "Infinite Loop": {
+    "prefix": "fori",
+    "body": ["for {", "\t$0", "}"],
+    "description": "Infinite loop",
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch ${1:expression} {",
+      "case ${2:value}:",
+      "\t$0",
+      "default:",
+      "\t",
+      "}",
+    ],
+    "description": "Switch statement",
+  },
+  "Select Statement": {
+    "prefix": "select",
+    "body": [
+      "select {",
+      "case ${1:v} := <-${2:channel}:",
+      "\t$0",
+      "default:",
+      "\t",
+      "}",
+    ],
+    "description": "Select statement",
+  },
+  "Struct": {
+    "prefix": "st",
+    "body": ["type ${1:Name} struct {", "\t${2:Field} ${3:Type}", "}"],
+    "description": "Struct definition",
+  },
+  "Interface": {
+    "prefix": "int",
+    "body": [
+      "type ${1:Name} interface {",
+      "\t${2:Method}(${3:params}) ${4:returns}",
+      "}",
+    ],
+    "description": "Interface definition",
+  },
+  "Error": {
+    "prefix": "err",
+    "body": ["errors.New(\"${1:error message}\")"],
+    "description": "Create error",
+  },
+  "Error Formatted": {
+    "prefix": "errf",
+    "body": ["fmt.Errorf(\"${1:error message}: %w\", ${2:err})"],
+    "description": "Create formatted error",
+  },
+  "JSON Marshal": {
+    "prefix": "jsonm",
+    "body": [
+      "${1:data}, err := json.Marshal(${2:value})",
+      "if err != nil {",
+      "\t$0",
+      "}",
+    ],
+    "description": "JSON Marshal with error check",
+  },
+  "JSON Unmarshal": {
+    "prefix": "jsonu",
+    "body": [
+      "var ${1:data} ${2:Type}",
+      "err := json.Unmarshal(${3:bytes}, &${1:data})",
+      "if err != nil {",
+      "\t$0",
+      "}",
+    ],
+    "description": "JSON Unmarshal with error check",
+  },
+}

@@ -1,5 +1,6 @@
 /*
 !.gitignore
 !keymap.json
-!themes
 !settings.json
+!themes
+!snippets
