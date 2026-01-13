@@ -99,13 +99,7 @@
   },
   "For-In Loop": {
     "prefix": "fih",
-    "body": [
-      "for (const ${1:key} in ${2:object}) {",
-      "\tif (!Object.hasOwn(${2:object}, ${1:key})) continue;",
-      "\tconst ${3:element} = ${2:object}[${1:key}];",
-      "\t$0",
-      "}",
-    ],
+    "body": ["for (const ${1:key} in ${2:object}) {", "}"],
   },
   "For-Of Loop": {
     "prefix": "fof",

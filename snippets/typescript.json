@@ -2,7 +2,7 @@
   "Constructor": {
     "prefix": "ctor",
     "body": ["/**", " *", " */", "constructor() {", "\tsuper();", "\t$0", "}"],
-    "description": "Constructor"
+    "description": "Constructor",
   },
   "Class Definition": {
     "prefix": "class",
@@ -11,24 +11,24 @@
       "\tconstructor(${2:parameters}) {",
       "\t\t$0",
       "\t}",
-      "}"
+      "}",
     ],
-    "description": "Class Definition"
+    "description": "Class Definition",
   },
   "Public Method Definition": {
     "prefix": "public method",
     "body": ["/**", " * ${1:name}", " */", "public ${1:name}() {", "\t$0", "}"],
-    "description": "Public Method Definition"
+    "description": "Public Method Definition",
   },
   "Private Method Definition": {
     "prefix": "private method",
     "body": ["private ${1:name}() {", "\t$0", "}"],
-    "description": "Private Method Definition"
+    "description": "Private Method Definition",
   },
   "Import Statement": {
     "prefix": "import",
     "body": ["import { $0 } from \"${1:module}\";"],
-    "description": "Import external module"
+    "description": "Import external module",
   },
   "Property getter": {
     "prefix": "get",
@@ -37,24 +37,24 @@
       "public get ${1:value}() : ${2:string} {",
       "\t${3:return $0}",
       "}",
-      ""
+      "",
     ],
-    "description": "Property getter"
+    "description": "Property getter",
   },
   "Log to the console": {
     "prefix": "log",
     "body": ["console.log($1);", "$0"],
-    "description": "Log to the console"
+    "description": "Log to the console",
   },
   "Log warning to console": {
     "prefix": "warn",
     "body": ["console.warn($1);", "$0"],
-    "description": "Log warning to the console"
+    "description": "Log warning to the console",
   },
   "Log error to console": {
     "prefix": "error",
     "body": ["console.error($1);", "$0"],
-    "description": "Log error to the console"
+    "description": "Log error to the console",
   },
   "Define a full property": {
     "prefix": "prop",
@@ -67,14 +67,14 @@
       "public set ${1:value}(v : ${2:string}) {",
       "\tthis._${1:value} = v;",
       "}",
-      ""
+      "",
     ],
-    "description": "Define a full property"
+    "description": "Define a full property",
   },
   "Triple-slash reference": {
     "prefix": "ref",
     "body": ["/// <reference path=\"$1\" />", "$0"],
-    "description": "Triple-slash reference"
+    "description": "Triple-slash reference",
   },
   "Property setter": {
     "prefix": "set",
@@ -83,43 +83,37 @@
       "public set ${1:value}(v : ${2:string}) {",
       "\tthis.$3 = v;",
       "}",
-      ""
+      "",
     ],
-    "description": "Property setter"
+    "description": "Property setter",
   },
   "Method Definition": {
     "prefix": "method",
     "body": ["/**", " * ", " */", "${1:name}() {", "\t$0", "}"],
-    "description": "Method Definition"
+    "description": "Method Definition",
   },
   "Throw Exception": {
     "prefix": "throw",
     "body": ["throw new Error(\"$1\");", "$0"],
-    "description": "Throw Exception"
+    "description": "Throw Exception",
   },
   "For-In Loop": {
     "prefix": "fih",
-    "body": [
-      "for (const ${1:key} in ${2:object}) {",
-      "\tif (!Object.hasOwn(${2:object}, ${1:key})) continue;",
-      "\tconst ${3:element} = ${2:object}[${1:key}];",
-      "\t$0",
-      "}"
-    ]
+    "body": ["for (const ${1:key} in ${2:object}) {", "}"],
   },
   "For-Of Loop": {
     "prefix": "fof",
-    "body": ["for (const ${1:element} of ${2:object}) {", "\t$0", "}"]
+    "body": ["for (const ${1:element} of ${2:object}) {", "\t$0", "}"],
   },
   "If Statement": {
     "prefix": "iff",
     "body": ["if (${1:condition}) {", "\t$0", "}"],
-    "description": "If Statement"
+    "description": "If Statement",
   },
   "New Statement": {
     "prefix": "new",
     "body": ["const ${1:name} = new ${2:type}(${3:arguments});$0"],
-    "description": "New Statement"
+    "description": "New Statement",
   },
   "Switch Statement": {
     "prefix": "switch",
@@ -131,44 +125,44 @@
       "",
       "\tdefault:",
       "\t\tbreak;",
-      "}"
+      "}",
     ],
-    "description": "Switch Statement"
+    "description": "Switch Statement",
   },
   "new Promise": {
     "prefix": "newpromise",
     "body": [
       "new Promise((resolve, reject) => {",
       "\t$TM_SELECTED_TEXT$0",
-      "})"
+      "})",
     ],
-    "description": "Create a new Promise"
+    "description": "Create a new Promise",
   },
   "Function Statement": {
     "prefix": "ffn",
     "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
-    "description": "Function Statement"
+    "description": "Function Statement",
   },
   "If-Else Statement": {
     "prefix": "ife",
-    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"]
+    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"],
   },
   "While Statement": {
     "prefix": "whi",
     "body": ["while (${1:condition}) {", "\t$0", "}"],
-    "description": "While Statement"
+    "description": "While Statement",
   },
   "Do-While Statement": {
     "prefix": "dwh",
     "body": ["do {", "\t$0", "} while (${1:condition});"],
-    "description": "Do-While Statement"
+    "description": "Do-While Statement",
   },
   "For-Await-Of Loop": {
     "prefix": "fao",
-    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"]
+    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"],
   },
   "Try-Catch Statement": {
     "prefix": "trc",
-    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"]
-  }
+    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"],
+  },
 }
