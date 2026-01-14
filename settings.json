@@ -28,8 +28,7 @@
     "show_nav_history_buttons": false,
   },
   "ui_font_weight": 500.0,
-  "buffer_font_weight": 550.0,
-  "buffer_font_family": "Monaco",
+  "buffer_font_family": "Menlo",
   "project_panel": {
     "button": true,
     "folder_icons": false,
@@ -49,8 +48,6 @@
     "JSONC": ["**/.eslintrc", "**/tsconfig.json", "**/.prettierrc"],
   },
   "soft_wrap": "editor_width",
-  "tab_size": 2,
   "telemetry": { "metrics": false, "diagnostics": false },
-  "ui_font_size": 15.0,
   "theme": "VS Code Dark+",
 }
