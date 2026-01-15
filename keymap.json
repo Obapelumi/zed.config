@@ -23,4 +23,15 @@
       "cmd-g": "agent::Keep",
     },
   },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": true
+        }
+      ]
+    }
+  }
 ]
