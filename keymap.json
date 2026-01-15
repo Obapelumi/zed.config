@@ -2,26 +2,26 @@
   {
     "context": "Editor",
     "bindings": {
-      "alt-shift-f": "editor::Format",
-    },
+      "alt-shift-f": "editor::Format"
+    }
   },
   {
     "context": "Editor",
     "bindings": {
-      "cmd-y": "editor::Redo",
-    },
+      "cmd-y": "editor::Redo"
+    }
   },
   {
     "context": "AgentPanel",
     "bindings": {
-      "cmd-g": "agent::AllowOnce",
-    },
+      "cmd-g": "agent::AllowOnce"
+    }
   },
   {
     "context": "(Editor && editor_agent_diff)",
     "bindings": {
-      "cmd-g": "agent::Keep",
-    },
+      "cmd-g": "agent::Keep"
+    }
   },
   {
     "context": "Workspace",
@@ -32,6 +32,24 @@
           "create_new_window": true
         }
       ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd--": "editor::SelectLine"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-l": "agent::AddSelectionToThread"
+    }
+  },
+  {
+    "context": "(Editor && mode == full)",
+    "bindings": {
+      "cmd-l": "agent::AddSelectionToThread"
     }
   }
 ]
