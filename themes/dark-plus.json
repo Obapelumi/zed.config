@@ -144,7 +144,7 @@
           "variable.special": { "color": "#569cd6" },
           "variant": { "color": "#4EC9B0" }
         },
-        "tab.active_background": "#181818",
+        "tab.active_background": "#131313",
         "tab.inactive_background": "#252525",
         "tab_bar.background": "#1b1b1b",
         "terminal.ansi.black": "#000000",

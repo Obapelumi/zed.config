@@ -7,21 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_size": 2,
   "agent_servers": {
     "opencode": {
       "type": "extension",
-      "favorite_models": [
-        "opencode/grok-code"
-      ],
+      "favorite_models": ["opencode/grok-code"],
       "default_config_options": {},
-      "favorite_config_option_values": {}
-    }
+      "favorite_config_option_values": {},
+    },
   },
   "icon_theme": "Colored Zed Icons Theme Light",
   "ui_font_size": 15.0,
   "format_on_save": "off",
   "terminal": { "dock": "right" },
-  "snippet_sort_order": "top",
   "buffer_font_size": 12.0,
   "buffer_font_features": { "calt": false },
   "toolbar": { "quick_actions": false, "breadcrumbs": false },

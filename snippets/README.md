@@ -209,9 +209,7 @@ Files: `typescript.json`, `tsx.json`
 
 ```typescript
 class name {
-    constructor(parameters) {
-
-    }
+  constructor(parameters) {}
 }
 ```
 
@@ -292,7 +290,7 @@ public set value(v : string) {
 #### `import` - Import statement
 
 ```typescript
-import {  } from "module";
+import {} from "module";
 ```
 
 #### `ref` - Triple-slash reference
@@ -301,33 +299,12 @@ import {  } from "module";
 /// <reference path="" />
 ```
 
-### Console
-
-#### `log` - console.log()
-
-```typescript
-console.log();
-```
-
-#### `warn` - console.warn()
-
-```typescript
-console.warn();
-```
-
-#### `error` - console.error()
-
-```typescript
-console.error();
-```
-
 ### Control Flow
 
 #### `iff` - If statement
 
 ```typescript
 if (condition) {
-
 }
 ```
 
@@ -335,9 +312,7 @@ if (condition) {
 
 ```typescript
 if (condition) {
-
 } else {
-
 }
 ```
 
@@ -345,12 +320,11 @@ if (condition) {
 
 ```typescript
 switch (key) {
-    case value:
+  case value:
+    break;
 
-        break;
-
-    default:
-        break;
+  default:
+    break;
 }
 ```
 
@@ -358,10 +332,7 @@ switch (key) {
 
 ```typescript
 try {
-
-} catch (error) {
-
-}
+} catch (error) {}
 ```
 
 ### Loops
@@ -370,7 +341,6 @@ try {
 
 ```typescript
 for (const key in object) {
-
 }
 ```
 
@@ -378,7 +348,6 @@ for (const key in object) {
 
 ```typescript
 for (const element of object) {
-
 }
 ```
 
@@ -386,24 +355,19 @@ for (const element of object) {
 
 ```typescript
 for await (const element of object) {
-
 }
 ```
 
 #### `whi` - While loop
 
 ```typescript
-while (condition) {
-
-}
+while (condition) {}
 ```
 
 #### `dwh` - Do-While loop
 
 ```typescript
-do {
-
-} while (condition);
+do {} while (condition);
 ```
 
 ### Async & Promises
@@ -411,9 +375,7 @@ do {
 #### `newpromise` - Create new Promise
 
 ```typescript
-new Promise((resolve, reject) => {
-
-})
+new Promise((resolve, reject) => {});
 ```
 
 ### Other
@@ -421,19 +383,11 @@ new Promise((resolve, reject) => {
 #### `ffn` - Function statement
 
 ```typescript
-function name(params) {
-
-}
+function name(params) {}
 ```
 
 #### `new` - New instance statement
 
 ```typescript
 const name = new type(arguments);
-```
-
-#### `throw` - Throw exception
-
-```typescript
-throw new Error("");
 ```
