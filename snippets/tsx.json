@@ -1,9 +1,4 @@
 {
-  "Constructor": {
-    "prefix": "ctor",
-    "body": ["/**", " *", " */", "constructor() {", "\tsuper();", "\t$0", "}"],
-    "description": "Constructor"
-  },
   "Class Definition": {
     "prefix": "class",
     "body": [
@@ -15,31 +10,10 @@
     ],
     "description": "Class Definition"
   },
-  "Public Method Definition": {
-    "prefix": "public method",
-    "body": ["/**", " * ${1:name}", " */", "public ${1:name}() {", "\t$0", "}"],
-    "description": "Public Method Definition"
-  },
-  "Private Method Definition": {
-    "prefix": "private method",
-    "body": ["private ${1:name}() {", "\t$0", "}"],
-    "description": "Private Method Definition"
-  },
-  "Import Statement": {
-    "prefix": "import",
-    "body": ["import { $0 } from \"${1:module}\";"],
-    "description": "Import external module"
-  },
-  "Property getter": {
-    "prefix": "get",
-    "body": [
-      "",
-      "public get ${1:value}() : ${2:string} {",
-      "\t${3:return $0}",
-      "}",
-      ""
-    ],
-    "description": "Property getter"
+  "Constructor": {
+    "prefix": "ctor",
+    "body": ["/**", " *", " */", "constructor() {", "\tsuper();", "\t$0", "}"],
+    "description": "Constructor"
   },
   "Define a full property": {
     "prefix": "prop",
@@ -56,10 +30,67 @@
     ],
     "description": "Define a full property"
   },
-  "Triple-slash reference": {
-    "prefix": "ref",
-    "body": ["/// <reference path=\"$1\" />", "$0"],
-    "description": "Triple-slash reference"
+  "Do-While Statement": {
+    "prefix": "dwh",
+    "body": ["do {", "\t$0", "} while (${1:condition});"],
+    "description": "Do-While Statement"
+  },
+  "For-Await-Of Loop": {
+    "prefix": "fao",
+    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"]
+  },
+  "For-In Loop": {
+    "prefix": "fih",
+    "body": ["for (const ${1:key} in ${2:object}) {", "}"]
+  },
+  "For-Of Loop": {
+    "prefix": "fof",
+    "body": ["for (const ${1:element} of ${2:object}) {", "\t$0", "}"]
+  },
+  "Function Statement": {
+    "prefix": "ffn",
+    "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
+    "description": "Function Statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ife",
+    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"]
+  },
+  "If Statement": {
+    "prefix": "iff",
+    "body": ["if (${1:condition}) {", "\t$0", "}"],
+    "description": "If Statement"
+  },
+  "Import Statement": {
+    "prefix": "import",
+    "body": ["import { $0 } from \"${1:module}\";"],
+    "description": "Import external module"
+  },
+  "Method Definition": {
+    "prefix": "method",
+    "body": ["/**", " * ", " */", "${1:name}() {", "\t$0", "}"],
+    "description": "Method Definition"
+  },
+  "New Statement": {
+    "prefix": "new",
+    "body": ["const ${1:name} = new ${2:type}(${3:arguments});$0"],
+    "description": "New Statement"
+  },
+  "Private Method Definition": {
+    "prefix": "private method",
+    "body": ["private ${1:name}() {", "\t$0", "}"],
+    "description": "Private Method Definition"
+  },
+  "Property getter": {
+    "prefix": "get",
+    "body": [
+      "",
+      "public get ${1:value}() : ${2:string} {",
+      "\t${3:return $0}",
+      "}",
+      ""
+    ],
+    "description": "Property getter"
   },
   "Property setter": {
     "prefix": "set",
@@ -72,28 +103,10 @@
     ],
     "description": "Property setter"
   },
-  "Method Definition": {
-    "prefix": "method",
-    "body": ["/**", " * ", " */", "${1:name}() {", "\t$0", "}"],
-    "description": "Method Definition"
-  },
-  "For-In Loop": {
-    "prefix": "fih",
-    "body": ["for (const ${1:key} in ${2:object}) {", "}"]
-  },
-  "For-Of Loop": {
-    "prefix": "fof",
-    "body": ["for (const ${1:element} of ${2:object}) {", "\t$0", "}"]
-  },
-  "If Statement": {
-    "prefix": "iff",
-    "body": ["if (${1:condition}) {", "\t$0", "}"],
-    "description": "If Statement"
-  },
-  "New Statement": {
-    "prefix": "new",
-    "body": ["const ${1:name} = new ${2:type}(${3:arguments});$0"],
-    "description": "New Statement"
+  "Public Method Definition": {
+    "prefix": "public method",
+    "body": ["/**", " * ${1:name}", " */", "public ${1:name}() {", "\t$0", "}"],
+    "description": "Public Method Definition"
   },
   "Switch Statement": {
     "prefix": "switch",
@@ -109,6 +122,20 @@
     ],
     "description": "Switch Statement"
   },
+  "Try-Catch Statement": {
+    "prefix": "trc",
+    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"]
+  },
+  "Triple-slash reference": {
+    "prefix": "ref",
+    "body": ["/// <reference path=\"$1\" />", "$0"],
+    "description": "Triple-slash reference"
+  },
+  "While Statement": {
+    "prefix": "whi",
+    "body": ["while (${1:condition}) {", "\t$0", "}"],
+    "description": "While Statement"
+  },
   "new Promise": {
     "prefix": "newpromise",
     "body": [
@@ -117,32 +144,5 @@
       "})"
     ],
     "description": "Create a new Promise"
-  },
-  "Function Statement": {
-    "prefix": "ffn",
-    "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
-    "description": "Function Statement"
-  },
-  "If-Else Statement": {
-    "prefix": "ife",
-    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"]
-  },
-  "While Statement": {
-    "prefix": "whi",
-    "body": ["while (${1:condition}) {", "\t$0", "}"],
-    "description": "While Statement"
-  },
-  "Do-While Statement": {
-    "prefix": "dwh",
-    "body": ["do {", "\t$0", "} while (${1:condition});"],
-    "description": "Do-While Statement"
-  },
-  "For-Await-Of Loop": {
-    "prefix": "fao",
-    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"]
-  },
-  "Try-Catch Statement": {
-    "prefix": "trc",
-    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"]
   }
 }

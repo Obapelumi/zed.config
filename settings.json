@@ -7,63 +7,62 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "tab_size": 2,
-  "agent_servers": {
-    "opencode": {
-      "type": "extension",
-      "favorite_models": ["opencode/grok-code"],
-      "default_config_options": {},
-      "favorite_config_option_values": {},
-    },
-  },
-  "icon_theme": "Colored Zed Icons Theme Light",
-  "ui_font_size": 15.0,
-  "format_on_save": "off",
-  "terminal": { "dock": "right" },
-  "buffer_font_size": 12.0,
-  "buffer_font_features": { "calt": false },
-  "toolbar": { "quick_actions": false, "breadcrumbs": false },
-  "scrollbar": { "git_diff": false },
-  "cursor_shape": "bar",
-  "tabs": {
-    "show_diagnostics": "errors",
-    "file_icons": true,
-    "git_status": true,
-  },
-  "show_edit_predictions": false,
-  "tab_bar": {
-    "show_tab_bar_buttons": false,
-    "show_nav_history_buttons": false,
-  },
-  "ui_font_weight": 500.0,
-  "buffer_font_family": "Menlo",
-  "project_panel": {
-    "button": true,
-    "folder_icons": false,
-    "auto_fold_dirs": true,
-  },
-  "base_keymap": "VSCode",
-  "sticky_scroll": {
-    "enabled": false,
-  },
-  "minimap": {
-    "max_width_columns": 40,
-  },
-  "file_types": {
-    "handlebars": ["*.stub"],
-    "shellscript": ["**/bin/**/*"],
-    "typescript": ["**/bin/**/*.ts"],
-    "JSONC": ["**/.eslintrc", "**/tsconfig.json", "**/.prettierrc"],
-  },
-  "soft_wrap": "editor_width",
-  "telemetry": { "metrics": false, "diagnostics": false },
-  "theme": "VS Code Dark+",
-  "languages": {
-    "CSS": {
-      "language_servers": [
-        "tailwindcss-intellisense-css",
-        "!vscode-css-language-server",
-      ],
-    },
-  },
+	"agent_servers": {
+		"opencode": {
+			"type": "extension",
+			"favorite_models": ["opencode/grok-code"],
+			"default_config_options": {},
+			"favorite_config_option_values": {},
+		},
+	},
+	"base_keymap": "VSCode",
+	"buffer_font_family": "Menlo",
+	"buffer_font_features": { "calt": false },
+	"buffer_font_size": 12.0,
+	"cursor_shape": "bar",
+	"file_types": {
+		"handlebars": ["*.stub"],
+		"shellscript": ["**/bin/**/*"],
+		"typescript": ["**/bin/**/*.ts"],
+		"JSONC": ["**/.eslintrc", "**/tsconfig.json", "**/.prettierrc"],
+	},
+	"format_on_save": "off",
+	"hard_tabs": true,
+	"icon_theme": "Colored Zed Icons Theme Light",
+	"languages": {
+		"CSS": {
+			"language_servers": [
+				"tailwindcss-intellisense-css",
+				"!vscode-css-language-server",
+			],
+		},
+	},
+	"minimap": {
+		"max_width_columns": 40,
+	},
+	"project_panel": {
+		"button": true,
+		"folder_icons": false,
+		"auto_fold_dirs": true,
+		"hide_root": true,
+		"entry_spacing": "standard",
+	},
+	"scrollbar": { "git_diff": false },
+	"show_edit_predictions": false,
+	"soft_wrap": "editor_width",
+	"sticky_scroll": {
+		"enabled": false,
+	},
+	"tab_bar": {
+		"show_tab_bar_buttons": false,
+		"show_nav_history_buttons": false,
+	},
+	"tab_size": 2,
+	"tabs": { "show_diagnostics": "all", "file_icons": true, "git_status": true },
+	"telemetry": { "metrics": false, "diagnostics": false },
+	"terminal": { "dock": "right" },
+	"theme": "VS Code Dark+",
+	"toolbar": { "quick_actions": false, "breadcrumbs": false },
+	"ui_font_size": 15.0,
+	"ui_font_weight": 500.0,
 }

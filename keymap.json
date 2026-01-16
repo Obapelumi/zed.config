@@ -1,14 +1,14 @@
 [
   {
-    "context": "Editor",
+    "context": "(Editor && editor_agent_diff)",
     "bindings": {
-      "alt-shift-f": "editor::Format"
+      "cmd-g": "agent::Keep"
     }
   },
   {
-    "context": "Editor",
+    "context": "(Editor && mode == full)",
     "bindings": {
-      "cmd-y": "editor::Redo"
+      "cmd-l": "agent::AddSelectionToThread"
     }
   },
   {
@@ -18,15 +18,15 @@
     }
   },
   {
-    "context": "(Editor && editor_agent_diff)",
+    "context": "AgentPanel",
     "bindings": {
-      "cmd-g": "agent::Keep"
+      "cmd-l": "agent::AddSelectionToThread"
     }
   },
   {
-    "context": "Workspace",
+    "context": "Editor",
     "bindings": {
-      "ctrl-r": "projects::OpenRecent"
+      "alt-shift-f": "editor::Format"
     }
   },
   {
@@ -36,15 +36,15 @@
     }
   },
   {
-    "context": "AgentPanel",
+    "context": "Editor",
     "bindings": {
-      "cmd-l": "agent::AddSelectionToThread"
+      "cmd-y": "editor::Redo"
     }
   },
   {
-    "context": "(Editor && mode == full)",
+    "context": "Workspace",
     "bindings": {
-      "cmd-l": "agent::AddSelectionToThread"
+      "ctrl-r": "projects::OpenRecent"
     }
   }
 ]

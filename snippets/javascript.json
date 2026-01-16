@@ -1,9 +1,4 @@
 {
-  "Constructor": {
-    "prefix": "ctor",
-    "body": ["/**", " *", " */", "constructor() {", "\tsuper();", "\t$0", "}"],
-    "description": "Constructor"
-  },
   "Class Definition": {
     "prefix": "class",
     "body": [
@@ -15,10 +10,19 @@
     ],
     "description": "Class Definition"
   },
-  "Method Definition": {
-    "prefix": "method",
-    "body": ["/**", " * ", " */", "${1:name}() {", "\t$0", "}"],
-    "description": "Method Definition"
+  "Constructor": {
+    "prefix": "ctor",
+    "body": ["/**", " *", " */", "constructor() {", "\tsuper();", "\t$0", "}"],
+    "description": "Constructor"
+  },
+  "Do-While Statement": {
+    "prefix": "dwh",
+    "body": ["do {", "\t$0", "} while (${1:condition});"],
+    "description": "Do-While Statement"
+  },
+  "For-Await-Of Loop": {
+    "prefix": "fao",
+    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"]
   },
   "For-In Loop": {
     "prefix": "fih",
@@ -28,10 +32,24 @@
     "prefix": "fof",
     "body": ["for (const ${1:element} of ${2:object}) {", "\t$0", "}"]
   },
+  "Function Statement": {
+    "prefix": "ffn",
+    "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
+    "description": "Function Statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ife",
+    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"]
+  },
   "If Statement": {
     "prefix": "iff",
     "body": ["if (${1:condition}) {", "\t$0", "}"],
     "description": "If Statement"
+  },
+  "Method Definition": {
+    "prefix": "method",
+    "body": ["/**", " * ", " */", "${1:name}() {", "\t$0", "}"],
+    "description": "Method Definition"
   },
   "New Statement": {
     "prefix": "new",
@@ -52,6 +70,15 @@
     ],
     "description": "Switch Statement"
   },
+  "Try-Catch Statement": {
+    "prefix": "trc",
+    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"]
+  },
+  "While Statement": {
+    "prefix": "whi",
+    "body": ["while (${1:condition}) {", "\t$0", "}"],
+    "description": "While Statement"
+  },
   "new Promise": {
     "prefix": "newpromise",
     "body": [
@@ -60,32 +87,5 @@
       "})"
     ],
     "description": "Create a new Promise"
-  },
-  "Function Statement": {
-    "prefix": "ffn",
-    "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
-    "description": "Function Statement"
-  },
-  "If-Else Statement": {
-    "prefix": "ife",
-    "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"]
-  },
-  "While Statement": {
-    "prefix": "whi",
-    "body": ["while (${1:condition}) {", "\t$0", "}"],
-    "description": "While Statement"
-  },
-  "Do-While Statement": {
-    "prefix": "dwh",
-    "body": ["do {", "\t$0", "} while (${1:condition});"],
-    "description": "Do-While Statement"
-  },
-  "For-Await-Of Loop": {
-    "prefix": "fao",
-    "body": ["for await (const ${1:element} of ${2:object}) {", "\t$0", "}"]
-  },
-  "Try-Catch Statement": {
-    "prefix": "trc",
-    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"]
   }
 }
