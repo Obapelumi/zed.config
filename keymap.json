@@ -1,50 +1,38 @@
 [
-  {
-    "context": "(Editor && editor_agent_diff)",
-    "bindings": {
-      "cmd-g": "agent::Keep"
-    }
-  },
-  {
-    "context": "(Editor && mode == full)",
-    "bindings": {
-      "cmd-l": "agent::AddSelectionToThread"
-    }
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "cmd-g": "agent::AllowOnce"
-    }
-  },
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "cmd-l": "agent::AddSelectionToThread"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "alt-shift-f": "editor::Format"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd--": "editor::SelectLine"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-y": "editor::Redo"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-r": "projects::OpenRecent"
-    }
-  }
+	{
+		"context": "(Editor && mode == full)",
+		"bindings": {
+			"cmd-l": "agent::AddSelectionToThread",
+		},
+	},
+	{
+		"context": "AgentPanel",
+		"bindings": {
+			"cmd-l": "agent::AddSelectionToThread",
+		},
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"alt-shift-f": "editor::Format",
+		},
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"cmd--": "editor::SelectLine",
+		},
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"cmd-y": "editor::Redo",
+		},
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-r": "projects::OpenRecent",
+		},
+	},
 ]
