@@ -8,14 +8,14 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
 	"agent": {
-  "default_model": {
-   "provider": "x_ai",
-   "model": "grok-3"
-  },
-  "favorite_models": [],
-  "model_parameters": []
- },
- "close_on_file_delete": true,
+		"default_model": {
+			"provider": "x_ai",
+			"model": "grok-3",
+		},
+		"favorite_models": [],
+		"model_parameters": [],
+	},
+	"close_on_file_delete": true,
 	"agent_servers": {
 		"codex": {
 			"favorite_models": ["gpt-5.3-codex/medium"],
@@ -48,6 +48,17 @@
 				"!vscode-css-language-server",
 			],
 		},
+	},
+	"semantic_tokens": "combined",
+	"global_lsp_settings": {
+		"semantic_token_rules": [
+			{
+				"token_type": "variable",
+				"token_modifiers": ["readonly"],
+				"style": ["constant"],
+			},
+			{ "token_type": "enumMember", "style": ["constant"] },
+		],
 	},
 	"minimap": {
 		"max_width_columns": 40,
