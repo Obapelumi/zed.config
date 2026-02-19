@@ -12,27 +12,18 @@
 			"Osaurus": {
 				"api_url": "http://127.0.0.1:1337/v1",
 				"available_models": [
-					{
-						"name": "foundation",
-						"max_tokens": 200000,
-						"max_output_tokens": 32000,
-						"max_completion_tokens": 200000,
-						"capabilities": {
-							"tools": true,
-							"images": false,
-							"parallel_tool_calls": false,
-							"prompt_cache_key": false,
-							"chat_completions": true,
-						},
-					},
+					{ "name": "foundation", "max_tokens": 200000 },
+					{ "name": "lfm2.5-1.2b-thinking-mlx-8bit", "max_tokens": 200000 },
+					{ "name": "lfm2.5-1.2b-instruct-mlx-4bit", "max_tokens": 200000 },
 				],
 			},
 		},
 	},
 	"agent": {
-		"default_model": {
-			"provider": "Osaurus",
-			"model": "foundation",
+		"default_model": { "provider": "Osaurus", "model": "lfm2.5-1.2b-thinking-mlx-8bit" },
+		"commit_message_model": {
+			"provider": "x_ai",
+			"model": "grok-4-1-fast-non-reasoning",
 		},
 		"favorite_models": [],
 		"model_parameters": [],
