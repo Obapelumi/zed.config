@@ -7,20 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"language_models": {
-		"openai_compatible": {
-			"Osaurus": {
-				"api_url": "http://127.0.0.1:1337/v1",
-				"available_models": [
-					{ "name": "foundation", "max_tokens": 200000 },
-					{ "name": "lfm2.5-1.2b-thinking-mlx-8bit", "max_tokens": 200000 },
-					{ "name": "lfm2.5-1.2b-instruct-mlx-4bit", "max_tokens": 200000 },
-				],
-			},
-		},
-	},
 	"agent": {
-		"default_model": { "provider": "Osaurus", "model": "lfm2.5-1.2b-thinking-mlx-8bit" },
+		"sidebar_side": "right",
+		"dock": "right",
+		"default_model": { "provider": "x_ai", "model": "grok-code-fast-1" },
 		"commit_message_model": {
 			"provider": "x_ai",
 			"model": "grok-4-1-fast-non-reasoning",
@@ -30,8 +20,9 @@
 	},
 	"close_on_file_delete": true,
 	"agent_servers": {
-		"codex": {
-			"favorite_models": ["gpt-5.3-codex/medium"],
+		"codex-acp": {
+			"type": "registry",
+			"favorite_models": ["gpt-5.4/medium"],
 		},
 		"opencode": {
 			"type": "extension",
@@ -93,11 +84,13 @@
 		"max_width_columns": 40,
 	},
 	"project_panel": {
+		"dock": "left",
 		"button": true,
 		"folder_icons": false,
 		"hide_root": true,
 		"entry_spacing": "standard",
 	},
+	"git_panel": { "dock": "left" },
 	"scrollbar": { "git_diff": false },
 	"show_edit_predictions": false,
 	"soft_wrap": "editor_width",

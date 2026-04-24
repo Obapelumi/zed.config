@@ -133,6 +133,7 @@
 					"string.special": { "color": "#ce9178" },
 					"string.special.symbol": { "color": "#ce9178" },
 					"tag": { "color": "#569cd6" },
+					"tag.component": { "color": "#4EC9B0" },
 					"text.literal": { "color": "#ce9178" },
 					"title": { "color": "#DCDCAA", "font_weight": 700 },
 					"type": { "color": "#4EC9B0" },
