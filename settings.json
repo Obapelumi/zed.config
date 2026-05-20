@@ -10,9 +10,31 @@
 	"diff_view_style": "unified",
 	"gutter": { "line_numbers": true },
 	"agent": {
+		"default_profile": "ask",
+		"tool_permissions": {
+			"tools": {
+				"move_path": {
+					"default": "allow",
+				},
+				"delete_path": {
+					"default": "allow",
+				},
+				"create_directory": {
+					"default": "allow",
+				},
+				"terminal": {
+					"default": "allow",
+				},
+			},
+		},
 		"sidebar_side": "right",
 		"dock": "right",
-		"default_model": { "provider": "x_ai", "model": "grok-code-fast-1" },
+		"default_model": {
+			"effort": "low",
+			"enable_thinking": true,
+			"provider": "openai-subscribed",
+			"model": "gpt-5.5",
+		},
 		"commit_message_model": {
 			"provider": "x_ai",
 			"model": "grok-4-1-fast-non-reasoning",
@@ -111,4 +133,11 @@
 	"toolbar": { "quick_actions": false, "breadcrumbs": false },
 	"ui_font_size": 15.0,
 	"ui_font_weight": 500.0,
+	"lsp": {
+		"eslint": {
+			"settings": {
+				"onIgnoredFiles": "off",
+			},
+		},
+	},
 }
