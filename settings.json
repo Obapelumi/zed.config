@@ -128,7 +128,7 @@
 	"tab_size": 2,
 	"tabs": { "show_diagnostics": "all", "file_icons": true, "git_status": true },
 	"telemetry": { "metrics": false, "diagnostics": false },
-	"terminal": { "dock": "right" },
+	"terminal": { "dock": "bottom" },
 	"theme": "VS Code Dark+",
 	"toolbar": { "quick_actions": false, "breadcrumbs": false },
 	"ui_font_size": 15.0,
