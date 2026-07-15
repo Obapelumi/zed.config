@@ -46,7 +46,7 @@
 	"agent_servers": {
 		"codex-acp": {
 			"default_config_options": {
-				"model": "gpt-5.6-terra",
+				"model": "gpt-5.6-sol",
 				"mode": "agent",
 				"reasoning_effort": "medium",
 			},
@@ -88,6 +88,22 @@
 			"language_servers": [
 				"tailwindcss-intellisense-css",
 				"!vscode-css-language-server",
+			],
+		},
+		"TypeScript": {
+			"language_servers": [
+				"typescript-ls",
+				"!vtsls",
+				"!typescript-language-server",
+				"...",
+			],
+		},
+		"TSX": {
+			"language_servers": [
+				"typescript-ls",
+				"!vtsls",
+				"!typescript-language-server",
+				"...",
 			],
 		},
 	},
