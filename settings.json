@@ -7,13 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+	"language_models": {
+		"opencode": { "show_zen_models": false },
+	},
 	"cli_default_open_behavior": "new_window",
-	"diff_view_style": "unified",
+	"diff_view_style": "split",
 	"gutter": { "line_numbers": true },
 	"agent": {
+		"sandbox_permissions": { "allow_unsandboxed": true },
 		"default_profile": "write",
 		"tool_permissions": {
 			"tools": {
+				"fetch": {
+					"default": "allow",
+				},
 				"move_path": {
 					"default": "allow",
 				},
@@ -28,13 +35,12 @@
 				},
 			},
 		},
-		"sidebar_side": "right",
 		"dock": "right",
 		"default_model": {
-			"effort": "low",
+			"effort": "high",
 			"enable_thinking": true,
-			"provider": "openai-subscribed",
-			"model": "gpt-5.5",
+			"provider": "opencode",
+			"model": "go/deepseek-v4.1-flash",
 		},
 		"commit_message_model": {
 			"provider": "x_ai",
@@ -45,14 +51,28 @@
 	},
 	"close_on_file_delete": true,
 	"agent_servers": {
+		"opencode": {
+			"default_config_options": {
+				"mode": "build",
+				"effort": "low",
+				"model": "opencode-go/deepseek-v4.1-flash",
+			},
+			"type": "registry",
+		},
+		"claude-acp": {
+			"default_config_options": {
+				"mode": "auto",
+			},
+			"type": "registry",
+		},
 		"codex-acp": {
 			"favorite_config_option_values": {
 				"reasoning_effort": ["low"],
 			},
 			"default_config_options": {
-				"model": "gpt-5.6-terra",
+				"model": "gpt-5.6-sol",
 				"mode": "agent",
-				"reasoning_effort": "low",
+				"reasoning_effort": "medium",
 			},
 			"type": "registry",
 		},
@@ -126,9 +146,9 @@
 		"max_width_columns": 40,
 	},
 	"project_panel": {
+		"folder_indicator": "chevron",
 		"dock": "left",
 		"button": true,
-		"folder_icons": false,
 		"hide_root": true,
 		"entry_spacing": "standard",
 	},
@@ -157,5 +177,8 @@
 				"onIgnoredFiles": "off",
 			},
 		},
+	},
+	"file_finder": {
+		"prefill_query_from_selection": false,
 	},
 }
